@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .hero-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 0.5s;
+  }
+}

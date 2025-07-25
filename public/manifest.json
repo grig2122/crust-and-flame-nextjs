@@ -1,0 +1,24 @@
+{
+  "name": "Crust & Flame Pizza Catering",
+  "short_name": "Crust & Flame",
+  "description": "Artisan wood-fired pizza catering for your special events",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#EA580C",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
