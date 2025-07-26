@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
       to: ['catering@crustandflamepizza.com'],
       subject: `New Catering Inquiry from ${body.fullName}`,
       html: emailHtml,
-      reply_to: body.email,
+      replyTo: body.email,
     });
 
     if (error) {
