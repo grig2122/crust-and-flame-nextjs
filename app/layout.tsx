@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { Header } from './components/Header'
 
@@ -55,6 +56,19 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </head>
       <body className={inter.className}>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17393503763"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17393503763');
+          `}
+        </Script>
         <Header />
         {children}
       </body>
