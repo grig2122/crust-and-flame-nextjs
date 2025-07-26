@@ -1,6 +1,7 @@
 'use client';
 
-import { Flame, ChefHat, CalendarCheck, BookOpen, MapPin } from 'lucide-react';
+import { CalendarCheck, BookOpen, MapPin, Flame } from 'lucide-react';
+import Image from 'next/image';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -11,11 +12,14 @@ export const Hero = () => {
     <section id="hero" className="hero-bg min-h-screen flex items-center justify-center text-white">
       <div className="text-center px-4 max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-6 animate-fade-in">
-          <div className="relative">
-            <Flame className="w-16 h-16 md:w-24 md:h-24 text-orange-400" />
-            <ChefHat className="w-8 h-8 text-white absolute -top-2 -right-2" />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold ml-4">
+          <Image 
+            src="/apple-touch-icon.png" 
+            alt="Crust & Flame Logo" 
+            width={180} 
+            height={180} 
+            className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40"
+          />
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold ml-2 md:ml-3">
             <span className="text-orange-400">Crust</span>
             <span className="text-white mx-2">&</span>
             <span className="text-orange-400">Flame</span>

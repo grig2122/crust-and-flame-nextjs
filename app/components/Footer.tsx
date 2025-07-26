@@ -1,10 +1,21 @@
+import Image from 'next/image';
+
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-xl font-bold">Crust & Flame</h3>
+            <div className="flex items-center mb-2">
+              <Image 
+                src="/favicon-32x32.png" 
+                alt="Crust & Flame Logo" 
+                width={24} 
+                height={24} 
+                className="mr-2"
+              />
+              <h3 className="text-xl font-bold">Crust & Flame</h3>
+            </div>
             <p className="text-gray-400">Authentic wood-fired pizza</p>
           </div>
           

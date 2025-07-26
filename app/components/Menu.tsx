@@ -69,7 +69,7 @@ const menuCategories = [
       {
         name: "Mexican Fiesta",
         description: "Chorizo, jalapeños, corn, cilantro, lime crema",
-        image: "https://images.unsplash.com/photo-1609126003389-7e87cbc0e6e3?w=400",
+        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400",
         isSpicy: true
       }
     ]

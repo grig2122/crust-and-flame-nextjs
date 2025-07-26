@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Flame } from 'lucide-react';
+import Image from 'next/image';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +28,13 @@ export function Header() {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center">
-            <Flame className="w-8 h-8 text-orange-400 mr-2" />
+            <Image 
+              src="/favicon-32x32.png" 
+              alt="Crust & Flame Logo" 
+              width={32} 
+              height={32} 
+              className="mr-2"
+            />
             <span className="text-2xl font-bold text-white">
               <span className="text-orange-400">Crust</span> & <span className="text-orange-400">Flame</span>
             </span>
