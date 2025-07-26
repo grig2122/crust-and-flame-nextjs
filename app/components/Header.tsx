@@ -35,7 +35,7 @@ export function Header() {
                 alt="&" 
                 width={32} 
                 height={32} 
-                className="w-8 h-8"
+                className="w-8 h-8 -translate-y-1"
               />
               <span className="text-orange-400">Flame</span>
             </span>

@@ -14,7 +14,7 @@ export function Footer() {
                   alt="&" 
                   width={20} 
                   height={20} 
-                  className="mx-1 w-5 h-5"
+                  className="mx-1 w-5 h-5 -translate-y-1"
                 />
                 <span>Flame</span>
               </h3>
@@ -51,7 +51,7 @@ export function Footer() {
               alt="&" 
               width={16} 
               height={16} 
-              className="mx-1 w-4 h-4 inline-block"
+              className="mx-1 w-4 h-4 inline-block -translate-y-0.5"
             />
             Flame. All rights reserved.
           </p>
