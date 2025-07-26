@@ -54,6 +54,46 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              "name": "Crust & Flame",
+              "description": "Authentic wood-fired pizza catering that brings the taste of Italy to your special events. Serving the Greater Los Angeles Area.",
+              "url": "https://crustandflamepizza.com",
+              "telephone": "(323) 561-2750",
+              "email": "catering@crustandflamepizza.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Los Angeles",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+              },
+              "servesCuisine": "Italian",
+              "priceRange": "$$",
+              "image": "https://crustandflamepizza.com/og-image.jpg",
+              "potentialAction": [
+                {
+                  "@type": "ViewAction",
+                  "name": "View Our Services",
+                  "target": "https://crustandflamepizza.com/#services"
+                },
+                {
+                  "@type": "ViewAction",
+                  "name": "View Our Menu",
+                  "target": "https://crustandflamepizza.com/#menu"
+                },
+                {
+                  "@type": "ViewAction",
+                  "name": "Contact Us",
+                  "target": "https://crustandflamepizza.com/#contact"
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Script
@@ -61,12 +101,25 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=AW-17393503763"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-ads" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17393503763');
+          `}
+        </Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-R5G4F7RDZV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R5G4F7RDZV');
           `}
         </Script>
         <Header />
