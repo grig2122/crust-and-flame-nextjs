@@ -19,7 +19,7 @@ export const Hero = () => {
               alt="&" 
               width={180} 
               height={180} 
-              className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"
+              className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 -translate-y-2 md:-translate-y-3 lg:-translate-y-4"
             />
             <span className="text-orange-400">Flame</span>
           </h1>
