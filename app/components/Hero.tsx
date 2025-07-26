@@ -12,16 +12,15 @@ export const Hero = () => {
     <section id="hero" className="hero-bg min-h-screen flex items-center justify-center text-white">
       <div className="text-center px-4 max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-6 animate-fade-in">
-          <Image 
-            src="/apple-touch-icon.png" 
-            alt="Crust & Flame Logo" 
-            width={180} 
-            height={180} 
-            className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40"
-          />
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold ml-2 md:ml-3">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold flex items-center">
             <span className="text-orange-400">Crust</span>
-            <span className="text-white mx-2">&</span>
+            <Image 
+              src="/logo.svg" 
+              alt="&" 
+              width={180} 
+              height={180} 
+              className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32"
+            />
             <span className="text-orange-400">Flame</span>
           </h1>
         </div>

@@ -7,14 +7,17 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="flex items-center mb-2">
-              <Image 
-                src="/favicon-32x32.png" 
-                alt="Crust & Flame Logo" 
-                width={24} 
-                height={24} 
-                className="mr-2"
-              />
-              <h3 className="text-xl font-bold">Crust & Flame</h3>
+              <h3 className="text-xl font-bold flex items-center">
+                <span>Crust</span>
+                <Image 
+                  src="/logo.svg" 
+                  alt="&" 
+                  width={20} 
+                  height={20} 
+                  className="mx-1 w-5 h-5"
+                />
+                <span>Flame</span>
+              </h3>
             </div>
             <p className="text-gray-400">Authentic wood-fired pizza</p>
           </div>
@@ -41,7 +44,17 @@ export function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; 2024 Crust & Flame. All rights reserved.</p>
+          <p className="flex items-center justify-center">
+            &copy; 2024 Crust
+            <Image 
+              src="/logo.svg" 
+              alt="&" 
+              width={16} 
+              height={16} 
+              className="mx-1 w-4 h-4 inline-block"
+            />
+            Flame. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

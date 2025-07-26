@@ -28,15 +28,16 @@ export function Header() {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center">
-            <Image 
-              src="/favicon-32x32.png" 
-              alt="Crust & Flame Logo" 
-              width={32} 
-              height={32} 
-              className="mr-2"
-            />
-            <span className="text-2xl font-bold text-white">
-              <span className="text-orange-400">Crust</span> & <span className="text-orange-400">Flame</span>
+            <span className="text-2xl font-bold text-white flex items-center">
+              <span className="text-orange-400">Crust</span>
+              <Image 
+                src="/logo.svg" 
+                alt="&" 
+                width={32} 
+                height={32} 
+                className="w-8 h-8"
+              />
+              <span className="text-orange-400">Flame</span>
             </span>
           </div>
 
