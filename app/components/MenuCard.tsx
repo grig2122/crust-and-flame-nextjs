@@ -10,6 +10,10 @@ interface MenuCardProps {
   description: string;
   isVegetarian?: boolean;
   isSpicy?: boolean;
+  isPremium?: boolean;
+  isDessert?: boolean;
+  extraCharge?: boolean;
+  price?: string;
   delay?: number;
 }
 
@@ -18,7 +22,11 @@ export const MenuCard: React.FC<MenuCardProps> = ({
   name, 
   description, 
   isVegetarian, 
-  isSpicy, 
+  isSpicy,
+  isPremium,
+  isDessert,
+  extraCharge,
+  price,
   delay = 0 
 }) => {
   const [ref, isVisible] = useIntersectionObserver();
@@ -41,8 +49,15 @@ export const MenuCard: React.FC<MenuCardProps> = ({
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-white mb-2">{name}</h3>
+        <h3 className="text-xl font-semibold text-white mb-2">
+          {name}
+          {isPremium && <span className="text-orange-400 text-sm ml-2">**</span>}
+          {extraCharge && <span className="text-orange-400 text-sm ml-2">***</span>}
+        </h3>
         <p className="text-gray-400 mb-3 text-sm">{description}</p>
+        {price && (
+          <p className="text-orange-400 font-semibold mb-3">{price}</p>
+        )}
         <div className="flex gap-2">
           {isVegetarian && (
             <span className="inline-flex items-center text-green-500 text-sm">
@@ -54,6 +69,11 @@ export const MenuCard: React.FC<MenuCardProps> = ({
             <span className="inline-flex items-center text-red-500 text-sm">
               <Flame className="w-4 h-4 mr-1" />
               Spicy
+            </span>
+          )}
+          {isDessert && (
+            <span className="inline-flex items-center text-purple-500 text-sm">
+              Dessert
             </span>
           )}
         </div>
