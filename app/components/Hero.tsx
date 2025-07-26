@@ -11,7 +11,7 @@ export const Hero = () => {
   return (
     <section id="hero" className="hero-bg min-h-screen flex items-center justify-center text-white">
       <div className="text-center px-4 max-w-4xl mx-auto">
-        <div className="flex items-center justify-center mb-6 animate-fade-in">
+        <div className="hidden md:flex items-center justify-center mb-6 animate-fade-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold flex items-center">
             <span className="text-orange-400">Crust</span>
             <Image 
@@ -24,7 +24,7 @@ export const Hero = () => {
             <span className="text-orange-400">Flame</span>
           </h1>
         </div>
-        <p className="text-xl md:text-2xl mb-8 animate-fade-in animate-delay-100">
+        <p className="text-xl md:text-2xl mb-8 mt-20 md:mt-0 animate-fade-in animate-delay-100">
           Artisan wood-fired pizza catering that brings the authentic taste of Italy to your special events
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in animate-delay-200">
