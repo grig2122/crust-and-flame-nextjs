@@ -42,17 +42,17 @@ export function About() {
             <div>
               <AnimatedText>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Founded by chef Marco Rossi, Crust & Flame was born from a passion for authentic Italian cuisine and the ancient art of wood-fired cooking. After training in Naples and perfecting his craft in traditional pizzerias, Marco brought his expertise to the Bay Area.
+                  Crust & Flame was founded by Robert H, whose journey began in the heart of Los Angeles, working in some of the city's most renowned pizzerias. There, he learned from the best — Italian chefs trained in Napoli — mastering the time-honored techniques of true Neapolitan pizza.
                 </p>
               </AnimatedText>
               <AnimatedText delay={200}>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  What started as a small mobile pizza oven at local farmers markets has grown into the region's premier wood-fired catering service. We maintain the same commitment to quality and authenticity that defined our humble beginnings.
+                  Driven by a passion for wood-fired cooking and authentic flavors, Robert launched Crust & Flame as a way to bring that rich tradition to events across the region.
                 </p>
               </AnimatedText>
               <AnimatedText delay={400}>
                 <p className="text-gray-600 leading-relaxed">
-                  Every pizza we make is a celebration of tradition, crafted with imported Italian ingredients, time-honored techniques, and the unmistakable flavor that only a wood-fired oven can provide.
+                  What began as a humble mobile oven setup has grown into a sought-after catering service, known for its artisan pizzas, imported ingredients, and that unmistakable wood-fired taste.
                 </p>
               </AnimatedText>
             </div>

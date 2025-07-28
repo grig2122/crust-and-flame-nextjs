@@ -1,5 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import { AnimatedTitle } from './AnimatedTitle';
 import { MenuCard } from './MenuCard';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const menuCategories = [
   {
@@ -161,7 +165,19 @@ const menuCategories = [
   }
 ];
 
+// Featured items to show initially
+const featuredItems = [
+  menuCategories[0].items[0], // Margherita
+  menuCategories[0].items[1], // Pepperoni
+  menuCategories[0].items[3], // Quattro Formaggi
+  menuCategories[1].items[0], // Truffle Butter
+  menuCategories[0].items[8], // BBQ Chicken
+  menuCategories[2].items[0], // Chocolate & Berries
+];
+
 export function Menu() {
+  const [showFullMenu, setShowFullMenu] = useState(false);
+
   return (
     <section id="menu" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
@@ -172,7 +188,34 @@ export function Menu() {
           </div>
         </AnimatedTitle>
         
-        {menuCategories.map((category, categoryIndex) => (
+        {!showFullMenu ? (
+          // Featured items view
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-12">
+              {featuredItems.map((item, index) => (
+                <MenuCard 
+                  key={index} 
+                  {...item} 
+                  delay={index * 100}
+                />
+              ))}
+            </div>
+            
+            <div className="text-center">
+              <button
+                onClick={() => setShowFullMenu(true)}
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                View Full Menu
+                <ChevronDown className="w-5 h-5" />
+              </button>
+              <p className="text-gray-400 mt-4">Explore all {menuCategories.reduce((acc, cat) => acc + cat.items.length, 0)} delicious options</p>
+            </div>
+          </>
+        ) : (
+          // Full menu view
+          <>
+            {menuCategories.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-16">
             <h3 className="text-2xl font-bold text-orange-400 mb-8 text-center">
               {category.category}
@@ -188,6 +231,22 @@ export function Menu() {
             </div>
           </div>
         ))}
+            
+            <div className="text-center mt-12">
+              <button
+                onClick={() => {
+                  setShowFullMenu(false);
+                  // Smooth scroll to menu section
+                  document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors"
+              >
+                <ChevronUp className="w-5 h-5" />
+                Show Less
+              </button>
+            </div>
+          </>
+        )}
         
         <div className="mt-12 text-center space-y-2">
           <p className="text-gray-400 italic">
