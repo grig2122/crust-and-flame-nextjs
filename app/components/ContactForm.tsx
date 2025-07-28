@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import { Loader2, Send, CheckCircle } from 'lucide-react';
 
 interface FormData {
@@ -28,6 +28,17 @@ export const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+
+  // Trigger Google Ads conversion when form is successfully submitted
+  useEffect(() => {
+    if (isSubmitted && typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17393503763/-zsrCIKb6_gaEJOc7-VA',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+  }, [isSubmitted]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
