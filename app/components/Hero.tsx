@@ -9,8 +9,18 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="hero-bg min-h-screen flex items-center justify-center text-white">
-      <div className="text-center px-4 max-w-4xl mx-auto">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="relative text-center px-4 max-w-4xl mx-auto z-10">
         <div className="hidden md:flex items-center justify-center mb-6 animate-fade-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold flex items-center">
             <span className="text-orange-400">Crust</span>
